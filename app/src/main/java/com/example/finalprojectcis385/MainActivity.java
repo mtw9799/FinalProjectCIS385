@@ -14,6 +14,10 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static final String EXTRA_MESSAGE_RECORD = "com.example.FinalProjectCIS385.NewRecord.extra.MESSAGE";
+    public static final String EXTRA_MESSAGE_HISTORY = "com.example.FinalProjectCIS385.History.extra.MESSAGE";
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,12 +61,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void addNewRecord(View view) {
+        String message = "This is ";
         Intent intent = new Intent(this, NewRecord.class);
+        intent.putExtra(EXTRA_MESSAGE_RECORD, message);
         startActivity(intent);
     }
 
     public void viewPreviousRecords(View view) {
+        String message = "This is ";
         Intent intent = new Intent(this, History.class);
+        intent.putExtra(EXTRA_MESSAGE_HISTORY, message);
         startActivity(intent);
     }
 }

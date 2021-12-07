@@ -16,7 +16,10 @@ public interface RecordDAO {
     List<RepRecords> getAll();
 
     @Query("SELECT MAX(Weight) FROM reprecords WHERE Exercise = (:chosenExercise)")
-    String loadAllByIds(String chosenExercise);
+    Integer loadAllByIds(String chosenExercise);
+
+    @Query("SELECT MAX(Reps) FROM reprecords WHERE Exercise = (:chosenExercise) AND Weight = :chosenWeight")
+    Integer getMaxReps(String chosenExercise, Integer chosenWeight);
 
     @Query("INSERT INTO reprecords (Exercise, Weight, Reps) VALUES (:chosenExercise, :chosenWeight, :chosenReps)")
     void InsertNewRecord(String chosenExercise, Integer chosenWeight, Integer chosenReps);

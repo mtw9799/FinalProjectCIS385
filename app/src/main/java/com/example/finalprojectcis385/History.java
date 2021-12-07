@@ -28,11 +28,17 @@ public class History extends AppCompatActivity {
     private static final int NOTIFICATION_ID = 0;
     private NotificationManager mNotifyManager;
     private String record;
+    private String repRecord;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_history);
+
+        Intent intent = getIntent();
+        String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE_HISTORY);
+        String intentPassing = message + "Sparta!";
+        Log.v(TAG, intentPassing);
 
         spinner = (Spinner) findViewById(R.id.exerciseSpinner);
 
@@ -53,9 +59,11 @@ public class History extends AppCompatActivity {
     }
 
     public void ViewHistory(View view) {
-        String records = recordDA.loadAllByIds(spinner.getSelectedItem().toString());
+        Integer records = recordDA.loadAllByIds(spinner.getSelectedItem().toString());
+        Integer reps = recordDA.getMaxReps(spinner.getSelectedItem().toString(), records);
         record = records.toString();
-        Log.v(TAG, records);
+        repRecord = reps.toString();
+        Log.v(TAG, reps.toString());
         sendNotification();
     }
 
@@ -91,8 +99,8 @@ public class History extends AppCompatActivity {
 
 
         NotificationCompat.Builder notifyBuilder = new NotificationCompat.Builder(this, PRIMARY_CHANNEL_ID)
-                .setContentTitle("Your PR")
-                .setContentText(record)
+                .setContentTitle("Your PR for " + spinner.getSelectedItem().toString())
+                .setContentText(record + " X " + repRecord)
                 .setSmallIcon(R.drawable.ic_notification)
                 .setContentIntent(notificationPendingIntent)
                 .setAutoCancel(true);

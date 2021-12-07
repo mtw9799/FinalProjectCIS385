@@ -34,6 +34,11 @@ public class NewRecord extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exercise2);
 
+        Intent intent = getIntent();
+        String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE_RECORD);
+        String intentPassing = message + "madness.";
+        Log.v(TAG, intentPassing);
+
         spinner = (Spinner) findViewById(R.id.exerciseSelectSpinner);
         weight = (EditText) findViewById(R.id.InputWeightValue);
         reps = (EditText) findViewById(R.id.InputRepRecordValue);
