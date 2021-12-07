@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">FinalProjectCIS385</string>
+    <string name="new_record">New Record</string>
+    <string name="view_history">View History</string>
+
+    <string-array name="exercises_array">
+        <item>Squat</item>
+        <item>Bench Press</item>
+        <item>Overhead Press</item>
+        <item>Deadlift</item>
+        <item>Clean</item>
+    </string-array>
+
+    <string name="night_mode">Night Mode</string>
+    <string name="day_mode">Day Mode</string>
+</resources>

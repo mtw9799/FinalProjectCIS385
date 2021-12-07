@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/micah/AndroidStudioProjects/FinalProjectCIS385/app/src/main/res/drawable-v24/ic_customlauncher_foreground.xml" value="0.29128205128205126" />
+        <entry key="..\:/Users/micah/AndroidStudioProjects/FinalProjectCIS385/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.16302083333333334" />
+        <entry key="..\:/Users/micah/AndroidStudioProjects/FinalProjectCIS385/app/src/main/res/drawable/ic_CustomLauncher_foreground.xml" value="0.29583333333333334" />
+        <entry key="..\:/Users/micah/AndroidStudioProjects/FinalProjectCIS385/app/src/main/res/drawable/ic_customlauncher_foreground.xml" value="0.16302083333333334" />
+        <entry key="..\:/Users/micah/AndroidStudioProjects/FinalProjectCIS385/app/src/main/res/drawable/ic_launcher_background.xml" value="0.16302083333333334" />
+        <entry key="..\:/Users/micah/AndroidStudioProjects/FinalProjectCIS385/app/src/main/res/layout-land/activity_exercise2.xml" value="0.23677248677248677" />
+        <entry key="..\:/Users/micah/AndroidStudioProjects/FinalProjectCIS385/app/src/main/res/layout-land/activity_history.xml" value="0.335" />
+        <entry key="..\:/Users/micah/AndroidStudioProjects/FinalProjectCIS385/app/src/main/res/layout-land/activity_main.xml" value="0.23677248677248677" />
+        <entry key="..\:/Users/micah/AndroidStudioProjects/FinalProjectCIS385/app/src/main/res/layout-sw600dp/activity_exercise2.xml" value="0.209765625" />
+        <entry key="..\:/Users/micah/AndroidStudioProjects/FinalProjectCIS385/app/src/main/res/layout-sw600dp/activity_history.xml" value="0.209765625" />
+        <entry key="..\:/Users/micah/AndroidStudioProjects/FinalProjectCIS385/app/src/main/res/layout-sw600dp/activity_main.xml" value="0.209765625" />
+        <entry key="..\:/Users/micah/AndroidStudioProjects/FinalProjectCIS385/app/src/main/res/layout/activity_exercise2.xml" value="0.375" />
+        <entry key="..\:/Users/micah/AndroidStudioProjects/FinalProjectCIS385/app/src/main/res/layout/activity_history.xml" value="0.25" />
+        <entry key="..\:/Users/micah/AndroidStudioProjects/FinalProjectCIS385/app/src/main/res/layout/activity_main.xml" value="0.2796875" />
+        <entry key="..\:/Users/micah/AndroidStudioProjects/FinalProjectCIS385/app/src/main/res/menu/main_menu.xml" value="0.146875" />
+        <entry key="..\:/Users/micah/AndroidStudioProjects/FinalProjectCIS385/app/src/main/res/mipmap-anydpi-v26/ic_CustomLauncher.xml" value="0.16302083333333334" />
+        <entry key="..\:/Users/micah/AndroidStudioProjects/FinalProjectCIS385/app/src/main/res/mipmap-anydpi-v26/ic_CustomLauncher_round.xml" value="0.16302083333333334" />
+        <entry key="..\:/Users/micah/AndroidStudioProjects/FinalProjectCIS385/app/src/main/res/mipmap-anydpi-v26/ic_customlauncher.xml" value="0.16302083333333334" />
+        <entry key="..\:/Users/micah/AndroidStudioProjects/FinalProjectCIS385/app/src/main/res/mipmap-anydpi-v26/ic_customlauncher_round.xml" value="0.16302083333333334" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
