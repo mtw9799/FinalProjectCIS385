@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    // Dark mode stuff
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main_menu, menu);
@@ -39,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+    // More dark mode stuff
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         //Check if the correct item was clicked
@@ -52,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
                 AppCompatDelegate.setDefaultNightMode
                         (AppCompatDelegate.MODE_NIGHT_YES);
             }
-// Recreate the activity for the theme change to take effect.
+        // Recreate the activity for the theme change to take effect.
             recreate();
         }
 
@@ -60,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    // OnClick methods
     public void addNewRecord(View view) {
         String message = "This is ";
         Intent intent = new Intent(this, NewRecord.class);

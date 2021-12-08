@@ -34,19 +34,23 @@ public class NewRecord extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exercise2);
 
+        // Play with data given via Intent
         Intent intent = getIntent();
         String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE_RECORD);
         String intentPassing = message + "madness.";
         Log.v(TAG, intentPassing);
 
+        // Get values from the page
         spinner = (Spinner) findViewById(R.id.exerciseSelectSpinner);
         weight = (EditText) findViewById(R.id.InputWeightValue);
         reps = (EditText) findViewById(R.id.InputRepRecordValue);
 
+        // Get DB
         dbReps = Room.databaseBuilder(getApplicationContext(),
                 AppDatabaseReps.class, "Reps").allowMainThreadQueries().build();
         recordDA = dbReps.recordDAO();
 
+        // Populate spinner with static array
         // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.exercises_array, android.R.layout.simple_spinner_item);
@@ -62,9 +66,14 @@ public class NewRecord extends AppCompatActivity {
 
     public void LogRepRecord(View view) {
 
-        recordDA.InsertNewRecord(spinner.getSelectedItem().toString(), Integer.parseInt(weight.getText().toString()), Integer.parseInt(reps.getText().toString()) );
-        Log.v(TAG, "Success???");
-        sendNotification();
+        //Here is where I actually insert the values into the DB
+
+        if(Integer.parseInt(weight.getText().toString()) != 0 && Integer.parseInt(reps.getText().toString()) != 0){
+            recordDA.InsertNewRecord(spinner.getSelectedItem().toString(), Integer.parseInt(weight.getText().toString()), Integer.parseInt(reps.getText().toString()) );
+            Log.v(TAG, "Success???");
+            sendNotification();
+        }
+
     }
 
     public void createNotificationChannel()

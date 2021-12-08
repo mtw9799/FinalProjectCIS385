@@ -12,6 +12,7 @@ import java.util.List;
 @Dao
 public interface RecordDAO {
 
+    //Disregard this query, the other three are called at some point
     @Query("SELECT * FROM reprecords")
     List<RepRecords> getAll();
 

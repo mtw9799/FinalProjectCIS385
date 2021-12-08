@@ -64,9 +64,13 @@ public class History extends AppCompatActivity {
         record = records.toString();
         repRecord = reps.toString();
         Log.v(TAG, reps.toString());
-        sendNotification();
+
+        if (records != 0 && reps != 0) {
+            sendNotification();
+        }
     }
 
+    // This point forward is Notification stuff
     public void createNotificationChannel()
     {
         mNotifyManager = (NotificationManager)
